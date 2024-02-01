@@ -151,6 +151,9 @@ void SEMM1::save()
         p = p->next;
         count++;
 
+
+        
+
         
         namefile.open(namefilePath,std::ios::app);    //打开文件
         if (!namefile)
