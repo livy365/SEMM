@@ -1,0 +1,6 @@
+sep =,
+Name,required input,result
+Determine Stakeholder Needs and Requirements,=HYPERLINK("";""),=HYPERLINK("D:/elevoc_dnn_kernel.log";"1. Stakeholders 2. Requirements of users")
+Analyze System Context ,=HYPERLINK("D:/elevoc_dnn_kernel.log";"1. Stakeholders 2. Requirements of users"),=HYPERLINK("";"1. System boundary 2. Operating environment")
+kkkkk,=HYPERLINK("";"1. System boundary 2. Operating environment"),=HYPERLINK("";"99999")
+gdgd,=HYPERLINK("";"99999"),=HYPERLINK("";"sfetr")
