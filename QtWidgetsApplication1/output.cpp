@@ -10,10 +10,11 @@ output::output(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
-	connect(ui.tableWidget, &QTableWidget::itemDoubleClicked, this, &output::onItemClicked);
+	connect(ui.tableWidget, &QTableWidget::itemClicked, this, &output::onItemClicked);
+	connect(ui.tableWidget, &QTableWidget::itemDoubleClicked, this, &output::onItemdoubleClicked);
 	connect(ui.pushButton, &QPushButton::clicked, this, &output::buttonClicked);
 	connect(ui.pushButton_3, &QPushButton::clicked, this, &output::list_activity);
-	
+	connect(ui.pushButton_2, &QPushButton::clicked, this, &output::deleteActivity);
 	list_activity();
 }
 
@@ -29,7 +30,7 @@ void output::buttonClicked()
 
 
 
-void output::onItemClicked(QTableWidgetItem* item)
+void output::onItemdoubleClicked(QTableWidgetItem* item)
 {
       Node* p = head->next;
 	  int count = 0;
@@ -101,5 +102,43 @@ void output::list_activity()
 
     
 	ui.tableWidget->setVerticalHeaderLabels(strs);
+
+}
+
+void output::onItemClicked(QTableWidgetItem* item)
+{
+	selected_activity = head->next;
+	int count = 0;
+
+	while (count < item->row()) {
+		selected_activity = selected_activity->next;
+		count++;
+	}
+
+
+
+}
+
+void output::deleteActivity()
+{
+	if(selected_activity)
+	{
+		if(selected_activity->next){
+	       selected_activity->previous->next = selected_activity->next;
+	       selected_activity->next->previous = selected_activity->previous;
+	       free(selected_activity);}
+		else {
+			selected_activity->previous->next = selected_activity->next;
+			tail->previous = selected_activity->previous;
+			free(selected_activity);
+		}
+
+
+	curLength--;
+	list_activity();
+	}
+	else {
+		std::cout << "error" << std::endl;
+	}
 
 }

@@ -16,13 +16,17 @@ public:
 	~output();
 	
 public slots:
-	void output::onItemClicked(QTableWidgetItem* item);
+	void output::onItemdoubleClicked(QTableWidgetItem* item);
 	void output::buttonClicked();
 	void output::list_activity();
+	void output::onItemClicked(QTableWidgetItem* item);
+	void deleteActivity();
 private:
 	Ui::outputClass ui;
 	MethodList methodlist;
 	Result_details result_detail;
 	Activity_Planer activity_plan;
 	Activity_edit activity_edit;
+	Node* selected_activity=NULL;
+
 };
