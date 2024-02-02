@@ -64,6 +64,9 @@
     <ClCompile Include="Activity_edit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Method_editor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Method.h">
@@ -87,6 +90,9 @@
     <QtMoc Include="Activity_edit.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="Method_editor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="Method.ui">
@@ -108,6 +114,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="Activity_edit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Method_editor.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

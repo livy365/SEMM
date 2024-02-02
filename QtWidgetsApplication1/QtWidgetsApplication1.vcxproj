@@ -89,6 +89,7 @@
     <QtUic Include="Method.ui" />
     <QtUic Include="MethodEdit.ui" />
     <QtUic Include="MethodList.ui" />
+    <QtUic Include="Method_editor.ui" />
     <QtUic Include="output.ui" />
     <QtUic Include="Result_details.ui" />
     <QtUic Include="SEMM1.ui" />
@@ -99,6 +100,7 @@
     <ClCompile Include="Method.cpp" />
     <ClCompile Include="MethodEdit.cpp" />
     <ClCompile Include="MethodList.cpp" />
+    <ClCompile Include="Method_editor.cpp" />
     <ClCompile Include="output.cpp" />
     <ClCompile Include="Result_details.cpp" />
     <ClCompile Include="SEMM1.cpp" />
@@ -118,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activity.h" />
+    <QtMoc Include="Method_editor.h" />
     <QtMoc Include="Activity_edit.h" />
     <QtMoc Include="MethodEdit.h" />
     <QtMoc Include="Activity_Planer.h" />

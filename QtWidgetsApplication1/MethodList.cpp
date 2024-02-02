@@ -30,8 +30,10 @@ void MethodList::SetActivity(Node * _activity)
 void MethodList::onItemClicked(QListWidgetItem* item)
 {
 	qDebug() << "Item clicked: " << item->text();
-	method.setMethoditem(ui.listWidget->row(item), currentactivity);
-	method.show();
+	methodeditor.setMethoditem(ui.listWidget->row(item), currentactivity);
+	methodeditor.show();
+
+
 }
 
 void MethodList::buttonClicked()
