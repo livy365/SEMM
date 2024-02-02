@@ -21,7 +21,7 @@ SEMM1::SEMM1(QWidget *parent)
    // connect(ui.listWidget, SIGNAL(QListWidget::itemClicked()), this, SLOT(onItemClicked()));
     connect(ui.listWidget, &QListWidget::itemDoubleClicked, this, &SEMM1::onItemClicked);
     connect(ui.actionExport, &QAction::triggered, this, &SEMM1::Exported);
-
+    connect(ui.actionSave, &QAction::triggered, this, &SEMM1::save);
     connect(ui.pushButton_3, &QPushButton::clicked, this, &SEMM1::restore);
     connect(ui.pushButton_4, &QPushButton::clicked, this, &SEMM1::nextbuttonClicked);
     connect(ui.pushButton_5, &QPushButton::clicked, this, &SEMM1::select);
@@ -59,8 +59,7 @@ void SEMM1::addnew(activity _activity)
 
 void SEMM1::Exported()
 {
-    
-
+    output.list_activity();
     output.show();
 }
 

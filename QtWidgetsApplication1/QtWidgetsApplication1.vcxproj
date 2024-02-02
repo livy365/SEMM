@@ -84,6 +84,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtRcc Include="SEMM1.qrc" />
+    <QtUic Include="Activity_edit.ui" />
     <QtUic Include="Activity_Planer.ui" />
     <QtUic Include="Method.ui" />
     <QtUic Include="MethodEdit.ui" />
@@ -93,6 +94,7 @@
     <QtUic Include="SEMM1.ui" />
     <QtMoc Include="SEMM1.h" />
     <ClCompile Include="activity.cpp" />
+    <ClCompile Include="Activity_edit.cpp" />
     <ClCompile Include="Activity_Planer.cpp" />
     <ClCompile Include="Method.cpp" />
     <ClCompile Include="MethodEdit.cpp" />
@@ -116,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activity.h" />
+    <QtMoc Include="Activity_edit.h" />
     <QtMoc Include="MethodEdit.h" />
     <QtMoc Include="Activity_Planer.h" />
   </ItemGroup>

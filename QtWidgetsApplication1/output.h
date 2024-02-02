@@ -5,7 +5,7 @@
 #include"MethodList.h"
 #include"Result_details.h"
 //#include"activity.h"
-
+#include"Activity_edit.h"
 #include"Activity_Planer.h"
 class output : public QWidget
 {
@@ -24,4 +24,5 @@ private:
 	MethodList methodlist;
 	Result_details result_detail;
 	Activity_Planer activity_plan;
+	Activity_edit activity_edit;
 };

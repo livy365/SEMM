@@ -113,25 +113,35 @@ p, li { white-space: pre-wrap; }
      <widget class="QPushButton" name="pushButton_5">
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Save</string>
+       <string>Choose File</string>
       </property>
      </widget>
     </item>
     <item row="8" column="0">
      <widget class="QPushButton" name="pushButton_3">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>restore</string>
+       <string>Restore</string>
       </property>
      </widget>
     </item>
     <item row="8" column="1">
      <widget class="QPushButton" name="pushButton_4">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>next</string>
+       <string>Next</string>
       </property>
      </widget>
     </item>
@@ -151,6 +161,7 @@ p, li { white-space: pre-wrap; }
      <string>File</string>
     </property>
     <addaction name="actionExport"/>
+    <addaction name="actionSave"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -166,6 +177,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionExport">
    <property name="text">
     <string>Dashboard</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
    </property>
   </action>
  </widget>

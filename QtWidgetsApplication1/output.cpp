@@ -13,6 +13,8 @@ output::output(QWidget *parent)
 	connect(ui.tableWidget, &QTableWidget::itemDoubleClicked, this, &output::onItemClicked);
 	connect(ui.pushButton, &QPushButton::clicked, this, &output::buttonClicked);
 	connect(ui.pushButton_3, &QPushButton::clicked, this, &output::list_activity);
+	
+	list_activity();
 }
 
 output::~output()
@@ -44,11 +46,24 @@ void output::onItemClicked(QTableWidgetItem* item)
 	  methodlist.SetActivity(p);
 	  methodlist.show();
 	}
-	
-	else {
+	else if (item->column() == 2)
+	{
+
+		result_detail.SetActivity(p->previous);
+		result_detail.show();
+	}
+	else if(item->column() == 3)
+	{
+	 
+	 result_detail.SetActivity(p);
      result_detail.show();
 	}
-	
+	else if (item->column() == 0)
+	{
+
+		activity_edit.SetActivity(p);
+		activity_edit.show();
+	}
 }
 
 void output::list_activity()
