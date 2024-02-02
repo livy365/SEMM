@@ -59,8 +59,7 @@ void SEMM1::addnew(activity _activity)
 
 void SEMM1::Exported()
 {
-    
-
+    output.list_activity();
     output.show();
 }
 
