@@ -4,6 +4,7 @@
 #include "ui_SEMM1.h"
 #include"Method.h"
 #include"output.h"
+#include"Matrix.h"
 //#include"activity.h"
 
 
@@ -24,10 +25,12 @@ public slots:
     void select();
     void save();
     void read();
+    void matrixshow();
 private:
     Ui::SEMM1Class ui;
     Method method;
     output output;
+    Matrix matrix;
     Node* p;
 
 };

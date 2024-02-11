@@ -12,6 +12,7 @@ public:
 	~Result_details();
 	void SetActivity(Node* _activity);
 	void select();
+	void save();
 private:
 	Ui::Result_detailsClass ui;
 	Node* currentactivity;

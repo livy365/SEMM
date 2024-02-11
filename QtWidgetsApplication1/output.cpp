@@ -15,6 +15,10 @@ output::output(QWidget *parent)
 	connect(ui.pushButton, &QPushButton::clicked, this, &output::buttonClicked);
 	connect(ui.pushButton_3, &QPushButton::clicked, this, &output::list_activity);
 	connect(ui.pushButton_2, &QPushButton::clicked, this, &output::deleteActivity);
+	ui.tableWidget->verticalHeader()->setDefaultSectionSize(100);
+	ui.tableWidget->horizontalHeader()->setDefaultSectionSize(300);
+
+
 	list_activity();
 }
 

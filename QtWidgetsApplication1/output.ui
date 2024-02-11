@@ -18,7 +18,7 @@
     <widget class="QTableWidget" name="tableWidget">
      <column>
       <property name="text">
-       <string>Name</string>
+       <string>Title</string>
       </property>
      </column>
      <column>
@@ -28,12 +28,12 @@
      </column>
      <column>
       <property name="text">
-       <string>required input</string>
+       <string>Required Input</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>expected result</string>
+       <string>Expected Result</string>
       </property>
       <property name="background">
        <color>

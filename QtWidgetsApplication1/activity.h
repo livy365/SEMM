@@ -17,6 +17,7 @@ public:
 	//std::string expected_input;
 	std::string expected_output;
     QString output_content;
+    QString output_overview;
     std::vector<std::vector<std::string>> method;
    
 

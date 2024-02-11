@@ -162,6 +162,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionExport"/>
     <addaction name="actionSave"/>
+    <addaction name="actionsemm"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -182,6 +183,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionSave">
    <property name="text">
     <string>Save</string>
+   </property>
+  </action>
+  <action name="actionsemm">
+   <property name="text">
+    <string>SEMM</string>
    </property>
   </action>
  </widget>

@@ -1,6 +1,7 @@
 sep =,
 Name,required input,result
-Determine Stakeholder Needs and Requirements,=HYPERLINK("";""),=HYPERLINK("D:/semm/QtWidgetsApplication1/QtWidgetsApplication1/activity/activity1/method1/intr.htm";"1. Stakeholders 2. Requirements of users")
-Analyze System Context ,=HYPERLINK("D:/semm/QtWidgetsApplication1/QtWidgetsApplication1/activity/activity1/method1/intr.htm";"1. Stakeholders 2. Requirements of users"),=HYPERLINK("D:/semm/QtWidgetsApplication1/QtWidgetsApplication1/1.txt";"1. System boundary 2. Operating environment")
-kkkkk,=HYPERLINK("D:/semm/QtWidgetsApplication1/QtWidgetsApplication1/1.txt";"1. System boundary 2. Operating environment"),=HYPERLINK("";"99999")
+Determine Stakeholder Needs and Requirements,=HYPERLINK("";""),=HYPERLINK("C:/Users/51710/Desktop/IEP/paper/1.htm";"1. Stakeholders 2. Requirements of users")
+Analyze System Context ,=HYPERLINK("C:/Users/51710/Desktop/IEP/paper/1.htm";"1. Stakeholders 2. Requirements of users"),=HYPERLINK("C:/Users/51710/Desktop/IEP/paper/2.htm";"1. System boundary 2. Operating environment")
+kkkkk,=HYPERLINK("C:/Users/51710/Desktop/IEP/paper/2.htm";"1. System boundary 2. Operating environment"),=HYPERLINK("";"99999")
 gdgd,=HYPERLINK("";"99999"),=HYPERLINK("";"sfetr")
+5,=HYPERLINK("";"sfetr"),=HYPERLINK("";"")

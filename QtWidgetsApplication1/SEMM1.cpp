@@ -22,6 +22,7 @@ SEMM1::SEMM1(QWidget *parent)
     connect(ui.listWidget, &QListWidget::itemDoubleClicked, this, &SEMM1::onItemClicked);
     connect(ui.actionExport, &QAction::triggered, this, &SEMM1::Exported);
     connect(ui.actionSave, &QAction::triggered, this, &SEMM1::save);
+    connect(ui.actionsemm, &QAction::triggered, this, &SEMM1::matrixshow);
     connect(ui.pushButton_3, &QPushButton::clicked, this, &SEMM1::restore);
     connect(ui.pushButton_4, &QPushButton::clicked, this, &SEMM1::nextbuttonClicked);
     connect(ui.pushButton_5, &QPushButton::clicked, this, &SEMM1::select);
@@ -203,7 +204,36 @@ void SEMM1::save()
 
     }
 
+    p = head;
+    count = 0;
+    std::string outlinefilePath = "activity/activity_outline.txt";
+    std::ofstream outlinefile(outlinefilePath, std::ios_base::out);    //定义输出流对象
+    outlinefile.close();
 
+    while (count < curLength) {
+        p = p->next;
+        count++;
+
+        // std::string filePath = "activity/activity"+std::to_string(count)+"_logger.txt";
+
+
+        outlinefile.open(outlinefilePath, std::ios::app);    //打开文件
+        if (!outlinefile)
+        {
+            std::cout << "打开文件失败" << std::endl;
+            exit(1);
+        }
+
+        //向文件中写入数据
+
+
+        outlinefile << p->data.output_overview.toStdString() + ";";
+
+
+        outlinefile.close();    //关闭文件
+
+
+    }
 
     p = head;
     count = 0;
@@ -410,6 +440,29 @@ void SEMM1::read()
         std::cerr << "Fail to open file !" << endl;
     }
 
+    p = head->next;
+    std::string file_outline = "activity/activity_outline.txt";
+    std::ifstream outlinefile_reader(file_outline);
+    if (outlinefile_reader.is_open())
+    {
+        while (outlinefile_reader.peek() != EOF)
+        {
+            std::string line;
+            getline(outlinefile_reader, line, ';');
+
+            p->data.output_overview = QString::fromStdString(line);
+            p = p->next;
+            // do something
+
+
+
+        }
+        outlinefile_reader.close();
+    }
+    else
+    {
+        std::cerr << "Fail to open file !" << endl;
+    }
 
     p = head->next;
 
@@ -449,4 +502,10 @@ void SEMM1::read()
    
     
 
+}
+
+void SEMM1::matrixshow()
+{
+    matrix.list_activity();
+    matrix.show();
 }
